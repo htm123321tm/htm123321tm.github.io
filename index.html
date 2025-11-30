@@ -15,62 +15,63 @@
       padding: 20px;
       text-align: center;
     }
+    header h1 {
+      margin: 0 0 5px;
+    }
+    header p {
+      margin: 0 0 10px;
+    }
     main {
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 0 20px 40px;
-    }
-    h1, h2, h3 {
-      color: #333;
-    }
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #ff9800;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Card layout */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 15px;
-    }
-    .card {
+      max-width: 1100px;
+      margin: 20px auto 40px;
       background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       border-radius: 6px;
       overflow: hidden;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
-    .card-link {
-      display: block;
-      color: inherit;
-      text-decoration: none;
-    }
-    .card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      display: block;
-    }
-    .card h3 {
-      margin: 12px 16px 6px;
-    }
-    .card p {
-      margin: 0 16px 16px;
-      color: #555;
-    }
-    .card-link:hover h3 {
-      text-decoration: underline;
     }
 
-    section {
-      margin-bottom: 40px;
+    .columns {
+      display: flex;
     }
+    .column {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+      border-left: 1px solid #ddd;
+    }
+    .column:first-child {
+      border-left: none;
+    }
+    .column img {
+      width: 100%;
+      max-width: 260px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+    }
+    .column h2 {
+      margin: 10px 0;
+      color: #333;
+    }
+    .column p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+    .column a {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #ff9800;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .column a:hover {
+      background: #e68900;
+    }
+
     footer {
       text-align: center;
       padding: 15px;
@@ -83,56 +84,35 @@
   <header>
     <h1>TBCguide</h1>
     <p>Learn some random things about The Battle Cats</p>
-    <nav>
-      <a href="#memorable">Memorable stages</a>
-      <a href="#units">Recommended units</a>
-      <a href="#eva">Evangelion collab</a>
-    </nav>
+    <p style="font-size:0.9rem; color:#ccc;">Choose a category below</p>
   </header>
 
   <main>
-    <!-- MEMORABLE STAGES -->
-    <section id="memorable">
-      <h2>Memorable stages</h2>
-      <div class="card-grid">
-        <!-- Card 1: example content page -->
-        <article class="card">
-          <a href="memorable-1.html" class="card-link">
-            <img src="img/images.jpg" alt="Into the Future – Moon (Chapter 1)">
-            <h3>Into the Future – Moon (Chapter 1)</h3>
-            <p>A brutal early-wall stage where many players first meet strong alien enemies.</p>
-          </a>
-        </article>
-      </div>
-    </section>
+    <div class="columns">
+      <!-- Column 1: Memorable stages -->
+      <section class="column">
+        <img src="images.jpg" alt="Memorable stages">
+        <h2>Memorable stages</h2>
+        <p>Stages that feel iconic, scary or just funny – the ones players still remember long after clearing them.</p>
+        <a href="memorable.html">Open memorable stages</a>
+      </section>
 
-    <!-- RECOMMENDED UNITS -->
-    <section id="units">
-      <h2>Recommended units</h2>
-      <div class="card-grid">
-        <article class="card">
-          <a href="#" class="card-link">
-            <img src="img/images.jpg" alt="Recommended units">
-            <h3>Coming soon</h3>
-            <p>This section will list core units worth upgrading for early and mid-game.</p>
-          </a>
-        </article>
-      </div>
-    </section>
+      <!-- Column 2: Recommended units -->
+      <section class="column">
+        <img src="images.jpg" alt="Recommended units">
+        <h2>Recommended units</h2>
+        <p>Units that give a lot of value for their cost – good investments for early and mid-game players.</p>
+        <a href="units.html">Open recommended units</a>
+      </section>
 
-    <!-- EVANGELION COLLAB -->
-    <section id="eva">
-      <h2>Evangelion collab</h2>
-      <div class="card-grid">
-        <article class="card">
-          <a href="#" class="card-link">
-            <img src="img/images.jpg" alt="Evangelion collab overview">
-            <h3>Evangelion collaboration overview</h3>
-            <p>Basic info about EVA units, banners, and which ones are worth rolling for.</p>
-          </a>
-        </article>
-      </div>
-    </section>
+      <!-- Column 3: Evangelion collab -->
+      <section class="column">
+        <img src="images.jpg" alt="Evangelion collab">
+        <h2>Evangelion collab</h2>
+        <p>Notes on the EVA collaboration: banners, units, and whether they’re worth rolling for with your Cat Food.</p>
+        <a href="eva.html">Open Evangelion collab</a>
+      </section>
+    </div>
   </main>
 
   <footer>
