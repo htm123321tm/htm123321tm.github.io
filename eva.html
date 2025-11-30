@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Evangelion collab · TBCguide</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background:#f4f4f4; }
+    header { background:#222; color:#fff; padding:15px 20px; }
+    header a { color:#ff9800; text-decoration:none; font-weight:bold; }
+    main {
+      max-width: 900px; margin:20px auto 40px;
+      background:#fff; padding:20px 30px;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+      border-radius:6px;
+    }
+    h1 { margin-top:0; }
+    .card-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:20px;
+      margin-top:15px;
+    }
+    .card {
+      background:#fafafa;
+      border-radius:6px;
+      overflow:hidden;
+      box-shadow:0 0 6px rgba(0,0,0,0.08);
+    }
+    .card-link { display:block; color:inherit; text-decoration:none; }
+    .card img {
+      width:100%; height:150px; object-fit:cover; display:block;
+    }
+    .card h2 { margin:10px 14px 6px; font-size:1.1rem; }
+    .card p { margin:0 14px 14px; color:#555; font-size:0.9rem; }
+    .card-link:hover h2 { text-decoration:underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">&larr; Back to home</a>
+  </header>
+
+  <main>
+    <h1>Evangelion collab</h1>
+    <p>Placeholder notes for the EVA collaboration banners and units.</p>
+
+    <div class="card-grid">
+      <article class="card">
+        <a href="eva-1.html" class="card-link">
+          <img src="images.jpg" alt="EVA banner 1">
+          <h2>Main EVA Banner (Part 1)</h2>
+          <p>Overview of the first banner and which units feel strongest.</p>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="eva-2.html" class="card-link">
+          <img src="images.jpg" alt="EVA banner 2">
+          <h2>Alternate EVA Banner (Part 2)</h2>
+          <p>A second banner with different focuses and niche units.</p>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="eva-3.html" class="card-link">
+          <img src="images.jpg" alt="EVA stages">
+          <h2>EVA Collaboration Stages</h2>
+          <p>Special collab stages that reward tickets, treasures and rare drops.</p>
+        </a>
+      </article>
+    </div>
+  </main>
+</body>
+</html>
